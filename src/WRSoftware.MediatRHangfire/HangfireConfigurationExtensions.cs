@@ -1,7 +1,7 @@
 ﻿using Hangfire;
 using Newtonsoft.Json;
 
-namespace WRSoftware.MediatRHangfire
+namespace WRSoftware.Utils.MediatRHangfire
 {
     /// <summary>
     /// 

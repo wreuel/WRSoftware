@@ -1,7 +1,7 @@
 ﻿using Hangfire;
 using MediatR;
 
-namespace WRSoftware.MediatRHangfire
+namespace WRSoftware.Utils.MediatRHangfire
 {
     /// <summary>
     /// 

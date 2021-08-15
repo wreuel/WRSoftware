@@ -6,6 +6,10 @@
 	<RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
 	<Copyright>Wesley Silva</Copyright>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	<PackageId>WRSoftware.Utils.MediatRHangfire</PackageId>
+	<Authors>Wesley Silva</Authors>
+	<Company>WRSoftware</Company>
+	<Product>WRSoftware.Utils.MediatRHangfire</Product>
   </PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Hangfire.Core" Version="1.7.24" />

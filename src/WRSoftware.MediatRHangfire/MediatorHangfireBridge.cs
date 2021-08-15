@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace WRSoftware.MediatRHangfire
+namespace WRSoftware.Utils.MediatRHangfire
 {
     /// <summary>
     ///   <br />
