@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using WRSoftware.Utils.Common.DTO;
 
-namespace WRSoftware.Utils.Helpers
+namespace WRSoftware.Utils.Helper
 {
     /// <summary>
     /// Enum Helper that can get the display name, the localization name and others

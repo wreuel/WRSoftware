@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace WRSoftware.Utils.Helpers
+namespace WRSoftware.Utils.Helper
 {
     /// <summary>
     /// String helper, with some check and generator of strings

@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace WRSoftware.Utils.Helpers
+namespace WRSoftware.Utils.Helper
 {
     /// <summary>
     /// An Encryption Helper that has methods to create some

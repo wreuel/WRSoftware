@@ -2,9 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Description />
+    <Description>Common Class used in other projects and extensions</Description>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
+    <NeutralLanguage>en-001</NeutralLanguage>
+    <PackageReleaseNotes>First version</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

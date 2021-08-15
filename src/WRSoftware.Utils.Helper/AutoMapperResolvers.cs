@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using System;
 
-namespace WRSoftware.Utils.Helpers
+namespace WRSoftware.Utils.Helper
 {
     /// <summary>
     /// Automapper Resolvers, which will contain Resolvers

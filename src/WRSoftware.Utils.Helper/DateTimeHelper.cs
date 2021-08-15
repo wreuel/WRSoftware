@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace WRSoftware.Utils.Helpers
+namespace WRSoftware.Utils.Helper
 {
     /// <summary>
     /// Helper for the Datetime, with some conventions

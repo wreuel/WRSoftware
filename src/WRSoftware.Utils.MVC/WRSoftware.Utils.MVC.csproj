@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Copyright>Wesley Silva</Copyright>
+    <RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +21,12 @@
   <ItemGroup>
     <ProjectReference Include="..\WRSoftware.Utils.Helper\WRSoftware.Utils.Helper.csproj" />
     <ProjectReference Include="..\WRSoftware.Utils.WebBase\WRSoftware.Utils.WebBase.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
  
 </Project>
