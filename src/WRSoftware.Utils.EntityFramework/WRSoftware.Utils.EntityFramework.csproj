@@ -6,6 +6,10 @@
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Description>Wrapper for EntityFramework using CQRS</Description>
     <Copyright>Wesley Silva</Copyright>
+    <Authors>Wesley Silva</Authors>
+	  <Company>WRSoftware</Company>
+    <PackageId>WRSoftware.Utils.EntityFramework</PackageId>
+    <Product>WRSoftware.Utils.EntityFramework</Product>
   </PropertyGroup>
 
   <ItemGroup>

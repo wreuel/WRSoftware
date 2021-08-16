@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WRSoftware.Utils.REST", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WRSoftware.Utils.WebBase", "src\WRSoftware.Utils.WebBase\WRSoftware.Utils.WebBase.csproj", "{BD73487A-646A-47F5-AAE6-14ADD1AD845B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WRSoftware.MediatRHangfire", "src\WRSoftware.MediatRHangfire\WRSoftware.MediatRHangfire.csproj", "{EC831985-37B4-4E44-B98E-EE8BB549B2AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WRSoftware.Utils.MediatRHangfire", "src\WRSoftware.Utils.MediatRHangfire\WRSoftware.Utils.MediatRHangfire.csproj", "{EC831985-37B4-4E44-B98E-EE8BB549B2AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

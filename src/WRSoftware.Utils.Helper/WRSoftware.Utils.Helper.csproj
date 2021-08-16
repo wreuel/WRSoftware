@@ -7,6 +7,10 @@
 		<Copyright>Wesley Silva</Copyright>
 		<RepositoryType></RepositoryType>
 		<RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
+		<Authors>Wesley Silva</Authors>
+	  	<Company>WRSoftware</Company>
+		<PackageId>WRSoftware.Utils.Helper</PackageId>
+    	<Product>WRSoftware.Utils.Helper</Product>
 	</PropertyGroup>
 
 	<ItemGroup>

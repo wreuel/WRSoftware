@@ -5,6 +5,10 @@
     <RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
     <Copyright>Wesley Silva</Copyright>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Authors>Wesley Silva</Authors>
+	  <Company>WRSoftware</Company>
+    <PackageId>WRSoftware.Utils.WebBase</PackageId>
+    <Product>WRSoftware.Utils.WebBase</Product>
   </PropertyGroup>
 
   <ItemGroup>

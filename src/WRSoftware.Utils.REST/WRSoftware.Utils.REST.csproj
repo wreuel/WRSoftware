@@ -5,6 +5,10 @@
     <Copyright>Wesley Silva</Copyright>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
+    <Authors>Wesley Silva</Authors>
+	  <Company>WRSoftware</Company>
+    <PackageId>WRSoftware.Utils.REST</PackageId>
+    <Product>WRSoftware.Utils.REST</Product>
   </PropertyGroup>
 
 

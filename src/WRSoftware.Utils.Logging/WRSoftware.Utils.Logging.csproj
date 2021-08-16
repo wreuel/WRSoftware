@@ -6,6 +6,10 @@
 	<Copyright>Wesley Silva</Copyright>
 	<Description>Logging Wrapper</Description>
 	<RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
+  <Authors>Wesley Silva</Authors>
+	<Company>WRSoftware</Company>
+  <PackageId>WRSoftware.Utils.Logging</PackageId>
+  <Product>WRSoftware.Utils.Logging</Product>
   </PropertyGroup>
   <ItemGroup>
 	<PackageReference Include="Castle.Core" Version="4.4.1" />

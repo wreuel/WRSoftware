@@ -8,6 +8,10 @@
     <RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
     <NeutralLanguage>en-001</NeutralLanguage>
     <PackageReleaseNotes>First version</PackageReleaseNotes>
+    <Authors>Wesley Silva</Authors>
+	  <Company>WRSoftware</Company>
+    <PackageId>WRSoftware.Utils.Common</PackageId>
+    <Product>WRSoftware.Utils.Common</Product>
   </PropertyGroup>
 
   <ItemGroup>
