@@ -11,6 +11,9 @@
 		<Company>WRSoftware</Company>
 		<PackageId>WRSoftware.Utils.Helper</PackageId>
 		<Product>WRSoftware.Utils.Helper</Product>
+		<AssemblyVersion>1.0.1.0</AssemblyVersion>
+		<FileVersion>1.0.1.0</FileVersion>
+		<Version>1.0.1</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
