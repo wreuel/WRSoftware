@@ -19,29 +19,6 @@ namespace WRSoftware.Utils.Helper
 
         }
 
-
-        ///// <summary>
-        ///// Randons the number.
-        ///// </summary>
-        ///// <param name="max">The maximum.</param>
-        ///// <returns></returns>
-        //private static int RandonNumber(int max)
-        //{
-
-        //    byte[] data = new byte[16];
-        //    int number = 0;
-        //    do
-        //    {
-        //        var randomGenerator = RandomNumberGenerator.Create(); // Compliant for security-sensitive use cases
-        //        randomGenerator.GetBytes(data);
-
-        //        number = BitConverter.ToInt32(data);
-        //    } while (number > max);
-
-
-        //    return number;
-        //}
-
         /// <summary>
         /// Generates the dummy password.
         /// </summary>
