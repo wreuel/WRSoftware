@@ -7,21 +7,6 @@ namespace WRSoftware.Utils.Helper.Tests
 {
     public class StringHelperTests
     {
-        public static IEnumerable<object[]> Exception()
-        {
-
-            yield return new object[] {new Exception("Error")};
-        }
-
-        public static IEnumerable<object[]> Exceptions()
-        {
-            var myError = new Exception("Error");
-            
-            yield return new object[] { new Exception("Error", myError) };
-            yield return new object[] { myError };
-        }
-        
-
         [Theory]
         [InlineData(8)]
         [InlineData(10)]
@@ -38,21 +23,29 @@ namespace WRSoftware.Utils.Helper.Tests
         public void ConvertStringToCollectionTest(string expected)
         {
             var list = StringHelper.ConvertStringToCollection(expected);
-            
+
             Assert.Single(list);
             Assert.Equal(expected, list.FirstOrDefault());
             Assert.IsAssignableFrom<IEnumerable<string>>(list);
 
         }
 
-
-        [Theory, MemberData(nameof(Exceptions))]
-        public void ConvertStringToCollectionExceptionTest(Exception expected)
+        public static IEnumerable<object[]> Exceptions()
         {
-            var list = StringHelper.ConvertStringToCollection(expected);
+            yield return new object[] { "Error", 2, new Exception("Error", new Exception("Inner Exception")) };
+            yield return new object[] { "Error", 1, new Exception("Error") };
+        }
 
-            Assert.Equal(expected.Message, list.FirstOrDefault());
+        [Theory]
+        [MemberData(nameof(Exceptions))]
+        public void ConvertStringToCollectionExceptionTest(string strExpected, int sizeExpected, Exception value)
+        {
+            var list = StringHelper.ConvertStringToCollection(value);
+
+            Assert.Equal(strExpected, list.FirstOrDefault());
+            Assert.Equal(sizeExpected, list.Count());
             Assert.IsAssignableFrom<IEnumerable<string>>(list);
+
         }
 
         [Theory]
@@ -60,25 +53,26 @@ namespace WRSoftware.Utils.Helper.Tests
         public void ConvertCollectionToStringEmptyTest(IEnumerable<string> expected)
         {
             var result = StringHelper.ConvertCollectionToString(expected);
-            Assert.Equal(string.Empty,result);
+            Assert.Equal(string.Empty, result);
         }
 
         public static IEnumerable<object[]> ListString()
         {
-            yield return new object[] { new List<string>(){"teste", "testes"} };
-            
+            yield return new object[] { "teste<br /testes", new List<string>() { "teste", "testes" } };
+
         }
 
-        [Theory, MemberData(nameof(ListString))]
-        public void ConvertCollectionToStringTest(IEnumerable<string> expected)
+        [Theory]
+        [MemberData(nameof(ListString))]
+        public void ConvertCollectionToStringTest(string expected, IEnumerable<string> entry)
         {
-            var result = StringHelper.ConvertCollectionToString(expected);
-            Assert.Equal(string.Join("<br />", expected), result);
+            var result = StringHelper.ConvertCollectionToString(entry);
+            Assert.Equal(expected, result);
         }
 
 
         [Theory]
-        [InlineData("5925250","59.252.50")]
+        [InlineData("5925250", "59.252.50")]
         [InlineData("", "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+")]
         [InlineData("8485", "A84B85")]
         public void OnlyNumberTest(string expected, string entry)
