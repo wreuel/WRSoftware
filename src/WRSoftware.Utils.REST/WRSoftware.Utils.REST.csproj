@@ -1,29 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <Copyright>Wesley Silva</Copyright>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
-    <Authors>Wesley Silva</Authors>
-	  <Company>WRSoftware</Company>
-    <PackageId>WRSoftware.Utils.REST</PackageId>
-    <Product>WRSoftware.Utils.REST</Product>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<Copyright>Wesley Silva</Copyright>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
+		<Authors>Wesley Silva</Authors>
+		<Company>WRSoftware</Company>
+		<PackageId>WRSoftware.Utils.REST</PackageId>
+		<Product>WRSoftware.Utils.REST</Product>
+	</PropertyGroup>
 
-
-  <ItemGroup>
-    <PackageReference Include="MediatR" Version="9.0.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WRSoftware.Utils.Helper\WRSoftware.Utils.Helper.csproj" />
-    <ProjectReference Include="..\WRSoftware.Utils.Logging\WRSoftware.Utils.Logging.csproj" />
-    <ProjectReference Include="..\WRSoftware.Utils.WebBase\WRSoftware.Utils.WebBase.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\WRSoftware.Utils.Helper\WRSoftware.Utils.Helper.csproj" />
+		<ProjectReference Include="..\WRSoftware.Utils.Logging\WRSoftware.Utils.Logging.csproj" />
+		<ProjectReference Include="..\WRSoftware.Utils.WebBase\WRSoftware.Utils.WebBase.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\LICENSE.txt">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 </Project>

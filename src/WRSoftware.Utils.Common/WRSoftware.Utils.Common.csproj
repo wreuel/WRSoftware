@@ -1,31 +1,34 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <Description>Common Class used in other projects and extensions</Description>
-    <PackageLicenseExpression></PackageLicenseExpression>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
-    <NeutralLanguage>en-001</NeutralLanguage>
-    <PackageReleaseNotes>First version</PackageReleaseNotes>
-    <Authors>Wesley Silva</Authors>
-	  <Company>WRSoftware</Company>
-    <PackageId>WRSoftware.Utils.Common</PackageId>
-    <Product>WRSoftware.Utils.Common</Product>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<Description>Common Class used in other projects and extensions</Description>
+		<PackageLicenseExpression></PackageLicenseExpression>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
+		<NeutralLanguage>en-001</NeutralLanguage>
+		<PackageReleaseNotes>First version</PackageReleaseNotes>
+		<Authors>Wesley Silva</Authors>
+		<Company>WRSoftware</Company>
+		<PackageId>WRSoftware.Utils.Common</PackageId>
+		<Product>WRSoftware.Utils.Common</Product>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="10.1.1" />
-    <PackageReference Include="FluentValidation" Version="9.3.0" />
-    <PackageReference Include="Microsoft.Extensions.Localization" Version="3.1.9" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="MediatR" Version="9.0.0" />
+		<PackageReference Include="AutoMapper" Version="10.1.1" />
+		<PackageReference Include="FluentValidation" Version="9.3.0" />
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="3.1.9" />
+		<PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="3.1.9" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+		<PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Include="..\..\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\LICENSE.txt">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>

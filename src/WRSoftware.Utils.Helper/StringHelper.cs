@@ -263,7 +263,7 @@ namespace WRSoftware.Utils.Helper
         {
             var str = "";
 
-            for (var i = 0; i < str.Length; i++)
+            for (var i = 0; i < txt.Length; i++)
             {
                 if (char.IsNumber(txt, i))
                 {
