@@ -30,7 +30,7 @@ namespace WRSoftware.Utils.Helper
         /// Converts to datetimeutc.
         /// </summary>
         /// <param name="dateTime">The date time.</param>
-        /// <returns></returns>
+        /// <returns>Returns the datetime as UTC</returns>
         public static DateTime ToDateTimeUTC(DateTime dateTime)
         {
             DateTime date = DateTime.Parse(dateTime.ToString("yyyy-MM-ddTHH:mm:ss.fffzzz")).ToUniversalTime();
@@ -38,11 +38,12 @@ namespace WRSoftware.Utils.Helper
         }
 
 
+
         /// <summary>
-        /// Converts to datetime.
+        /// Converts to datetimewithoutzone.
         /// </summary>
         /// <param name="dateTime">The date time.</param>
-        /// <returns></returns>
+        /// <returns>Returns the datetime without zone</returns>
         public static DateTime ToDateTimeWithoutZone(string dateTime)
         {
             if (dateTime.Length > 16)

@@ -20,33 +20,33 @@ namespace WRSoftware.Utils.Helper
         }
 
 
-        /// <summary>
-        /// Randons the number.
-        /// </summary>
-        /// <param name="max">The maximum.</param>
-        /// <returns></returns>
-        private static int RandonNumber(int max)
-        {
+        ///// <summary>
+        ///// Randons the number.
+        ///// </summary>
+        ///// <param name="max">The maximum.</param>
+        ///// <returns></returns>
+        //private static int RandonNumber(int max)
+        //{
 
-            byte[] data = new byte[16];
-            int number = 0;
-            do
-            {
-                var randomGenerator = RandomNumberGenerator.Create(); // Compliant for security-sensitive use cases
-                randomGenerator.GetBytes(data);
+        //    byte[] data = new byte[16];
+        //    int number = 0;
+        //    do
+        //    {
+        //        var randomGenerator = RandomNumberGenerator.Create(); // Compliant for security-sensitive use cases
+        //        randomGenerator.GetBytes(data);
 
-                number = BitConverter.ToInt32(data);
-            } while (number > max);
+        //        number = BitConverter.ToInt32(data);
+        //    } while (number > max);
 
 
-            return number;
-        }
+        //    return number;
+        //}
 
         /// <summary>
         /// Generates the dummy password.
         /// </summary>
         /// <param name="length">The length.</param>
-        /// <returns></returns>
+        /// <returns>A Random string</returns>
         public static string GenerateDummyPassword(int length = 8)
         {
             const string lower = "abcdefghijklmnopqrstuvwxyz";
@@ -54,19 +54,19 @@ namespace WRSoftware.Utils.Helper
             const string number = "1234567890";
             const string special = "!@#$%^&*_-";
 
-            ///var rand = new Random();
-            //// Get cryptographically random sequence of bytes
+            Random rand = new Random();
+            // Get cryptographically random sequence of bytes
             var bytes = new byte[length];
             new RNGCryptoServiceProvider().GetBytes(bytes);
 
-            int next = RandonNumber(4);
+
 
             // Build up a string using random bytes and character classes
             var res = new StringBuilder();
             foreach (var b in bytes)
             {
                 // Randomly select a character class for each byte
-                switch (next)
+                switch (rand.Next(4))
                 {
                     // In each case use mod to project byte b to the correct range
                     case 0:
@@ -82,7 +82,6 @@ namespace WRSoftware.Utils.Helper
                         res.Append(special[b % special.Count()]);
                         break;
                 }
-                next = RandonNumber(4);
             }
 
             return res.ToString();
