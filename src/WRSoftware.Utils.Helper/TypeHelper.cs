@@ -3,10 +3,11 @@
 namespace WRSoftware.Utils.Helper
 {
     /// <summary>
-    /// 
+    /// Helper to find types
     /// </summary>
     public static class TypeHelper
     {
+
         /// <summary>
         /// Determines whether [is inherited from] [the specified lookup].
         /// </summary>

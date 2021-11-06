@@ -9,16 +9,18 @@ namespace WRSoftware.Utils.Helper
     public static class DateTimeHelper
     {
         /// <summary>
-        /// 
+        /// Converts to datetimeutc.
         /// </summary>
         /// <param name="dateTime">The date time. With the Patern
         /// "yyyy-MM-ddTHH:mm:ss.fffzzz" / "2020-04-18T12:37:44.514-03:00" as GMT -3
-        /// "yyyy-MM-dd HH:mm:ss.fffzzz" / "2020-04-18 12:37:44.514-03:00" 
-        /// "yyyy-MM-ddTHH:mm:sszzz" / "2020-04-18T12:37:44-03:00" 
-        /// "yyyy-MM-dd HH:mm:sszzz" / "2020-04-18 12:37:44-03:00" 
-        /// "yyyy-MM-ddTHH:mmzzz" / "2020-04-18T12:37-03:00" 
-        /// "yyyy-MM-dd HH:mmzzz" / "2020-04-18 12:37-03:00" </param>
-        /// <returns>The DateTime as UTC</returns>
+        /// "yyyy-MM-dd HH:mm:ss.fffzzz" / "2020-04-18 12:37:44.514-03:00"
+        /// "yyyy-MM-ddTHH:mm:sszzz" / "2020-04-18T12:37:44-03:00"
+        /// "yyyy-MM-dd HH:mm:sszzz" / "2020-04-18 12:37:44-03:00"
+        /// "yyyy-MM-ddTHH:mmzzz" / "2020-04-18T12:37-03:00"
+        /// "yyyy-MM-dd HH:mmzzz" / "2020-04-18 12:37-03:00"</param>
+        /// <returns>
+        /// The DateTime as UTC
+        /// </returns>
         public static DateTime ToDateTimeUTC(string dateTime)
         {
             DateTime date = DateTime.Parse(dateTime).ToUniversalTime();
@@ -30,7 +32,9 @@ namespace WRSoftware.Utils.Helper
         /// Converts to datetimeutc.
         /// </summary>
         /// <param name="dateTime">The date time.</param>
-        /// <returns>Returns the datetime as UTC</returns>
+        /// <returns>
+        /// The datetime as UTC
+        /// </returns>
         public static DateTime ToDateTimeUTC(DateTime dateTime)
         {
             DateTime date = DateTime.Parse(dateTime.ToString("yyyy-MM-ddTHH:mm:ss.fffzzz")).ToUniversalTime();

@@ -7,7 +7,7 @@ using System.Text;
 namespace WRSoftware.Utils.Helper
 {
     /// <summary>
-    /// String helper, with some check and generator of strings
+    /// String helper, with some check and generator of strings.
     /// </summary>
     public class StringHelper
     {
@@ -23,7 +23,9 @@ namespace WRSoftware.Utils.Helper
         /// Generates the dummy password.
         /// </summary>
         /// <param name="length">The length.</param>
-        /// <returns>A Random string</returns>
+        /// <returns>
+        /// A Random String with the length passed or 8.
+        /// </returns>
         public static string GenerateDummyPassword(int length = 8)
         {
             const string lower = "abcdefghijklmnopqrstuvwxyz";
@@ -68,7 +70,9 @@ namespace WRSoftware.Utils.Helper
         /// Converts the string to collection.
         /// </summary>
         /// <param name="message">The message.</param>
-        /// <returns></returns>
+        /// <returns>
+        /// A collection with the string passed.
+        /// </returns>
         public static IEnumerable<string> ConvertStringToCollection(string message)
         {
             var list = new List<string>();
@@ -86,7 +90,9 @@ namespace WRSoftware.Utils.Helper
         /// Converts the string to collection.
         /// </summary>
         /// <param name="exception">The exception.</param>
-        /// <returns></returns>
+        /// <returns>
+        /// A collection with the Exception and Message, Stack Trace and InnerException.
+        /// </returns>
         public static IEnumerable<string> ConvertStringToCollection(Exception exception)
         {
             var list = new List<string>();
@@ -118,7 +124,9 @@ namespace WRSoftware.Utils.Helper
         /// Converts the collection to string.
         /// </summary>
         /// <param name="messages">The messages.</param>
-        /// <returns></returns>
+        /// <returns>
+        /// A string with all the message separated by <br />.
+        /// </returns>
         public static string ConvertCollectionToString(IEnumerable<string> messages) =>
             messages != null ? string.Join("<br />", messages) : string.Empty;
 
@@ -126,7 +134,9 @@ namespace WRSoftware.Utils.Helper
         /// Generates the random code.
         /// </summary>
         /// <param name="length">The length.</param>
-        /// <returns></returns>
+        /// <returns>
+        /// A Random code with length passed or 6 if not passed.
+        /// </returns>
         public static string GenerateRandomCode(int length = 6)
         {
             var random = new Random();
@@ -140,11 +150,14 @@ namespace WRSoftware.Utils.Helper
             return new string(stringChars);
         }
 
+
         /// <summary>
-        /// Checks if string is URL.
+        /// Checks if string is absolute URL.
         /// </summary>
         /// <param name="urlString">The URL string.</param>
-        /// <returns></returns>
+        /// <returns>
+        ///     <c>true</c> if [is an Absolute URL]; otherwise, <c>false</c>.
+        /// </returns>
         public static bool CheckIfStringIsAbsoluteUrl(string urlString)
         {
             return Uri.TryCreate(urlString, UriKind.Absolute, out var uriResult)
@@ -155,7 +168,9 @@ namespace WRSoftware.Utils.Helper
         /// Checks if string is valid base64.
         /// </summary>
         /// <param name="base64String">The base64 string.</param>
-        /// <returns></returns>
+        /// <returns>
+        ///      <c>true</c> if [is an Valid Base 64]; otherwise, <c>false</c>.
+        /// </returns>
         public static bool CheckIfStringIsValidBase64(string base64String)
         {
             string str;
@@ -174,6 +189,11 @@ namespace WRSoftware.Utils.Helper
             return Convert.TryFromBase64String(str, buffer, out _);
         }
 
+        /// <summary>
+        /// Checks the lenght.
+        /// </summary>
+        /// <param name="str">The string.</param>
+        /// <returns>The Length.</returns>
         private static int CheckLenght(string str)
         {
             return str.Length > 1 && str[str.Length - 2] == '=' ? 2 : 1;
@@ -183,7 +203,7 @@ namespace WRSoftware.Utils.Helper
         /// Gets the extension from base64 string.
         /// </summary>
         /// <param name="base64String">The base64 string.</param>
-        /// <returns></returns>
+        /// <returns>The extension of a file in base64</returns>
         public static string GetExtensionFromBase64String(string base64String)
         {
             return base64String.Split(';')[0].Split('/')[1];
@@ -193,7 +213,7 @@ namespace WRSoftware.Utils.Helper
         /// Gets the content type from base64 string.
         /// </summary>
         /// <param name="base64String">The base64 string.</param>
-        /// <returns></returns>
+        /// <returns>The type of file</returns>
         public static string GetContentTypeFromBase64String(string base64String)
         {
             return base64String.Split(':')[1].Split(';')[0];
@@ -203,7 +223,7 @@ namespace WRSoftware.Utils.Helper
         /// Gets the byte array from base64 string.
         /// </summary>
         /// <param name="base64String">The base64 string.</param>
-        /// <returns></returns>
+        /// <returns>The Byte Array from a Base64 String</returns>
         public static byte[] GetByteArrayFromBase64String(string base64String)
         {
             string str;
@@ -234,7 +254,7 @@ namespace WRSoftware.Utils.Helper
 
         /// <summary>Return only the numbers from a string</summary>
         /// <param name="txt">The text.</param>
-        /// <returns>str</returns>
+        /// <returns>Only numbers in a string as string</returns>
         public static string OnlyNumber(string txt)
         {
             var str = "";

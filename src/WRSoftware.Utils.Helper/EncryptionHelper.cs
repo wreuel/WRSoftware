@@ -22,10 +22,12 @@ namespace WRSoftware.Utils.Helper
         /// Generates the sh a256 string.
         /// </summary>
         /// <param name="inputString">The input string.</param>
-        /// <returns></returns>
+        /// <returns>
+        /// A SHA 256 as string
+        /// </returns>
         public static string GenerateSHA256String(string inputString)
         {
-            var sha256 = (HashAlgorithm)CryptoConfig.CreateFromName("SHA256Managed");
+            var sha256 = SHA256.Create();
             var bytes = Encoding.UTF8.GetBytes(inputString);
             var hash = sha256.ComputeHash(bytes);
             return GetStringFromHash(hash);
@@ -35,7 +37,9 @@ namespace WRSoftware.Utils.Helper
         /// Gets the string from hash.
         /// </summary>
         /// <param name="hash">The hash.</param>
-        /// <returns></returns>
+        /// <returns>
+        /// The Hash String
+        /// </returns>
         private static string GetStringFromHash(byte[] hash)
         {
             var result = new StringBuilder();
@@ -51,7 +55,9 @@ namespace WRSoftware.Utils.Helper
         /// Generates the random string.
         /// </summary>
         /// <param name="length">The length.</param>
-        /// <returns></returns>
+        /// <returns>
+        /// A random string base on Crypto
+        /// </returns>
         public static string GenerateRandomString(int length)
         {
             const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
@@ -76,7 +82,9 @@ namespace WRSoftware.Utils.Helper
         /// </summary>
         /// <param name="email">The email.</param>
         /// <param name="code">The code.</param>
-        /// <returns></returns>
+        /// <returns>
+        /// Encode a token with email and code as base64
+        /// </returns>
         public static string Encode(string email, string code)
         {
             var bytes = Encoding.UTF8.GetBytes($"{email}:{code}");
