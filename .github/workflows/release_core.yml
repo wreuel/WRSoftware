@@ -47,7 +47,6 @@ jobs:
     - name: Pack
       run: dotnet pack --configuration Release /p:Version=$BUILD_VERSION --no-build --output .
     
-    
     - name: Push NugetOrg
       run: dotnet nuget push "*.nupkg" --source 'https://api.nuget.org/v3/index.json' --api-key ${{secrets.NUGET_API_KEY}} --skip-duplicate
   
