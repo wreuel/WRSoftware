@@ -49,20 +49,8 @@ jobs:
     
     
     - name: Push NugetOrg
-      run: dotnet nuget push *.nupkg --source 'https://api.nuget.org/v3/index.json' --api-key ${{secrets.NUGET_API_KEY}} --skip-duplicate
+      run: dotnet nuget push "*.nupkg" --source 'https://api.nuget.org/v3/index.json' --api-key ${{secrets.NUGET_API_KEY}} --skip-duplicate
   
     - name: Push GitHub Packages
-      run: dotnet nuget push *.nupkg --source https://nuget.pkg.github.com/acraven/index.json --api-key ${GITHUB_TOKEN} --skip-duplicate
+      run: dotnet nuget push "*.nupkg" --source https://nuget.pkg.github.com/acraven/index.json --api-key ${GITHUB_TOKEN} --skip-duplicate
 
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@latest
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        body: |
-          ${{ steps.Changelog.outputs.changelog }}
-        draft: false
-        prerelease: false
