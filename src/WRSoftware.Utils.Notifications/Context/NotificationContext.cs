@@ -10,8 +10,8 @@ namespace WRSoftware.Utils.Notifications.Context
     /// <summary>
     /// 
     /// </summary>
-    /// <seealso cref="WRSoftware.Utils.Notifications.Interfaces.INotification" />
-    public class NotificationContext : INotification
+    /// <seealso cref="WRSoftware.Utils.Notifications.Interfaces.INotificationContext" />
+    public class NotificationContext : INotificationContext
     {
         /// <summary>
         /// Gets the notifications.
