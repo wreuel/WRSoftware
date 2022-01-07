@@ -1,4 +1,6 @@
-﻿namespace WRSoftware.Utils.Common.DTO
+﻿using System.ComponentModel;
+
+namespace WRSoftware.Utils.Common.DTO
 {
     /// <summary>
     /// The filter Generic Base,
@@ -26,13 +28,13 @@
         /// <param name="length">The length.</param>
         /// <param name="sort">The sort.</param>
         /// <param name="sortDirection">The sort direction. 0 = Ascending, 1 = Descending</param>
-        public FilterBaseDto(bool isFiltered, T data, int index, int length, string sort, byte sortDirection = 0)
+        public FilterBaseDto(bool isFiltered, T data, int index, int length, string sort, ListSortDirection sortDirection = 0)
         {
             IsFiltered = isFiltered;
             Data = data;
             Index = index;
             Length = length;
-            Sort = sort;
+            SortField = sort;
             SortDirection = sortDirection;
         }
 
@@ -74,7 +76,7 @@
         /// <value>
         /// The sort.
         /// </value>
-        public string Sort { get; set; }
+        public string SortField { get; set; }
 
         /// <summary>
         /// Gets or sets the sort direction. 0 = Ascending, 1 = Descending 
@@ -82,6 +84,6 @@
         /// <value>
         /// The sort direction.
         /// </value>
-        public int SortDirection { get; set; }
+        public ListSortDirection SortDirection { get; set; }
     }
 }
