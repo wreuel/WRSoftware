@@ -82,6 +82,6 @@
         /// <value>
         /// The sort direction.
         /// </value>
-        public byte SortDirection { get; set; }
+        public int SortDirection { get; set; }
     }
 }
