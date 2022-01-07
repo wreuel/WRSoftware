@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Threading;
+using System.Threading.Tasks;
 using WRSoftware.Utils.EntityFrameworkCore.Interfaces;
 
 namespace WRSoftware.Utils.EntityFrameworkCore.Repositories
@@ -40,5 +42,26 @@ namespace WRSoftware.Utils.EntityFrameworkCore.Repositories
         {
             get { return (IUnitOfWork)this._context; }
         }
+
+        /// <summary>
+        /// Saves the entities.
+        /// </summary>
+        /// <returns></returns>
+        public bool SaveEntities()
+        {
+            return UnitOfWork.SaveEntities();
+        }
+
+        /// <summary>
+        /// Saves the entities asynchronous.
+        /// </summary>
+        /// <param name="cancellationToken">The cancellation token.</param>
+        /// <returns></returns>
+        public async Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken)
+        {
+            return await UnitOfWork.SaveEntitiesAsync().ConfigureAwait(false);
+        }
+
+
     }
 }

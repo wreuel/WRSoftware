@@ -16,6 +16,8 @@ namespace WRSoftware.Utils.EntityFrameworkCore.Interfaces.CQRS
     /// <seealso cref="WRSoftware.Utils.EntityFrameworkCore.Interfaces.IRepository" />
     public interface ICommandRepository<TEntity> : IRepository where TEntity : class
     {
+
+
         /// <summary>
         /// Inserts the specified entity.
         /// </summary>

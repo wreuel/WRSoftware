@@ -5,15 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using WRSoftware.Utils.Notifications.Context;
+using WRSoftware.Utils.Notifications.Interfaces;
 
 namespace WRSoftware.Utils.Notifications.Filters
 {
     public class NotificationFilter : IAsyncResultFilter
     {
-        private readonly NotificationContext _notificationContext;
+        private readonly INotificationContext _notificationContext;
 
-        public NotificationFilter(NotificationContext notificationContext)
+        public NotificationFilter(INotificationContext notificationContext)
         {
             _notificationContext = notificationContext;
         }
