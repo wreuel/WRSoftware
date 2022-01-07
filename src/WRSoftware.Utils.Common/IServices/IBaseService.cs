@@ -16,7 +16,7 @@ namespace WRSoftware.Utils.Common.IServices
     /// <typeparam name="Filter">The type of the ilter.</typeparam>
     /// <typeparam name="Response">The type of the esponse.</typeparam>
     /// <typeparam name="Paginated">The type of the aginated.</typeparam>
-    public interface IBaseService<DataBaseObject, CreateObj, EditObj, GetObj, Filter, Response, Paginated>
+    public interface IBaseService<DataBaseObject, CreateObj, EditObj, GetObj, Filter, Response, Paginated> : IBaseSimpleService<DataBaseObject, Filter>
     {
         /// <summary>
         /// Creates the specified create.
@@ -46,11 +46,11 @@ namespace WRSoftware.Utils.Common.IServices
         /// <returns></returns>
         Task<Paginated> Paginate(Filter filter);
 
-        /// <summary>
-        /// Builds the predicate.
-        /// </summary>
-        /// <param name="filter">The filter.</param>
-        /// <returns></returns>
-        Expression<Func<DataBaseObject, bool>> BuildPredicate(Filter filter);
+        ///// <summary>
+        ///// Builds the predicate.
+        ///// </summary>
+        ///// <param name="filter">The filter.</param>
+        ///// <returns></returns>
+        //Expression<Func<DataBaseObject, bool>> BuildPredicate(Filter filter);
     }
 }

@@ -19,5 +19,12 @@ namespace WRSoftware.Utils.Common.IServices
         /// <param name="filter">The filter.</param>
         /// <returns></returns>
         Expression<Func<DataBaseObject, bool>> BuildPredicate(Filter filter);
+
+        /// <summary>
+        /// Create an expression to be used on link with the Order by
+        /// </summary>
+        /// <param name="orderByProperty">The order by property.</param>
+        /// <returns></returns>
+        Expression<Func<DataBaseObject, object>> OrderBy(string orderByProperty);
     }
 }
