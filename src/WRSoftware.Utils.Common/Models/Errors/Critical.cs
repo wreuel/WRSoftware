@@ -12,6 +12,14 @@ namespace WRSoftware.Utils.Common.Models.Errors
         /// <summary>
         /// Initializes a new instance of the <see cref="Critical"/> class.
         /// </summary>
+        public Critical()
+        {
+
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Critical"/> class.
+        /// </summary>
         /// <param name="description">The description.</param>
         public Critical(string description) : base(TextsConstants.Critical, description)
         {

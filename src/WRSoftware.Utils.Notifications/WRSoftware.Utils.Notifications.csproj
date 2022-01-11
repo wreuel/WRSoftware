@@ -10,13 +10,10 @@
 		<Product>WRSoftware.Utils.REST</Product>
 	</PropertyGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\WRSoftware.Utils.Common\WRSoftware.Utils.Common.csproj" />
+		<ProjectReference Include="..\WRSoftware.Utils.WebBase\WRSoftware.Utils.WebBase.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="..\..\LICENSE.txt">

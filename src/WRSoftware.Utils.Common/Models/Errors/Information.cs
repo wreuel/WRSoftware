@@ -12,6 +12,14 @@ namespace WRSoftware.Utils.Common.Models.Errors
         /// <summary>
         /// Initializes a new instance of the <see cref="Information"/> class.
         /// </summary>
+        public Information()
+        {
+
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Information"/> class.
+        /// </summary>
         /// <param name="description">The description.</param>
         public Information(string description) : base(TextsConstants.Information, description)
         {

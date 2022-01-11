@@ -7,6 +7,14 @@
     public class DropdownDto
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="DropdownDto"/> class.
+        /// </summary>
+        public DropdownDto()
+        {
+
+        }
+
+        /// <summary>
         /// Gets or sets the identifier.
         /// </summary>
         /// <value>

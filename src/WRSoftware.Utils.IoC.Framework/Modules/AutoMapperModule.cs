@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
+using System.Reflection;
 
 namespace WRSoftware.Utils.IoC.Framework.Modules
 {
@@ -40,6 +41,22 @@ namespace WRSoftware.Utils.IoC.Framework.Modules
                          .ToArray();
 
             services.AddAutoMapper(lista);
+        }
+
+        /// <summary>
+        /// Registers the automatic mapper executing assembly. DotNet Tests
+        /// </summary>
+        /// <typeparam name="AutoMapper">The type of the uto mapper.</typeparam>
+        /// <param name="services">The services.</param>
+        public static void RegisterAutoMapperExecutingAssembly<AutoMapper>(this IServiceCollection services)
+        {
+            var automappers = Assembly.GetExecutingAssembly()
+                .GetReferencedAssemblies()
+                .Select(Assembly.Load)
+                .Where(a => a.GetTypes().Contains(typeof(AutoMapper)))
+                .ToArray();
+
+            services.AddAutoMapper(automappers);
         }
     }
 }

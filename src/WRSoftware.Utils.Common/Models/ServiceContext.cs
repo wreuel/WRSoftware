@@ -9,6 +9,14 @@ namespace WRSoftware.Utils.Common.Models
     public class ServiceContext : IServiceContext
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="ServiceContext"/> class.
+        /// </summary>
+        public ServiceContext()
+        {
+
+        }
+
+        /// <summary>
         /// Gets or sets the service.
         /// </summary>
         /// <value>
