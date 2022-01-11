@@ -14,6 +14,14 @@ namespace WRSoftware.Utils.Common.Models.Errors
         /// <summary>
         /// Initializes a new instance of the <see cref="Warning"/> class.
         /// </summary>
+        public Warning()
+        {
+
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Warning"/> class.
+        /// </summary>
         /// <param name="description">The description.</param>
         public Warning(string description) : base(TextsConstants.Warning, description)
         {

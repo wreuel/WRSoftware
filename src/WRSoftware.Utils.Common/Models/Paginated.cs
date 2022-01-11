@@ -10,6 +10,14 @@ namespace WRSoftware.Utils.Common.Models
     public class Paginated<TEntity> where TEntity : class
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="Paginated{TEntity}"/> class.
+        /// </summary>
+        public Paginated()
+        {
+
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="Paginated{TEntity}" /> class.
         /// </summary>
         /// <param name="totalCount">The total count.</param>

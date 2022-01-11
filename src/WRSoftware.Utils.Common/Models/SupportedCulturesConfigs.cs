@@ -7,6 +7,11 @@ namespace WRSoftware.Utils.Common.Models
     /// </summary>
     public class SupportedCulturesConfigs
     {
+        public SupportedCulturesConfigs()
+        {
+
+        }
+
         /// <summary>
         /// Gets or sets the country.
         /// </summary>

@@ -10,6 +10,14 @@ namespace WRSoftware.Utils.Common.Models
     public abstract class AuditableEntityGuid
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="AuditableEntityGuid"/> class.
+        /// </summary>
+        public AuditableEntityGuid()
+        {
+
+        }
+
+        /// <summary>
         /// Gets or sets the created by.
         /// </summary>
         /// <value>

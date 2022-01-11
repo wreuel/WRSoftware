@@ -12,6 +12,14 @@ namespace WRSoftware.Utils.Common.Models.Errors
         /// <summary>
         /// Initializes a new instance of the <see cref="Error"/> class.
         /// </summary>
+        public Error()
+        {
+
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Error"/> class.
+        /// </summary>
         /// <param name="key">The key.</param>
         /// <param name="message">The message.</param>
         /// <exception cref="System.ArgumentNullException">

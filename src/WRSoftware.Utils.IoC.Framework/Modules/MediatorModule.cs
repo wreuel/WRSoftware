@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Linq;
+using System.Reflection;
 
 namespace WRSoftware.Utils.IoC.Framework.Modules
 {
@@ -21,6 +22,18 @@ namespace WRSoftware.Utils.IoC.Framework.Modules
                          .ToArray();
 
             services.AddMediatR(lista);
+        }
+
+        public static void RegisterMediatorExecutingAssembly<TMediator>(this IServiceCollection services)
+        {
+            var mediators = Assembly.GetExecutingAssembly()
+                 .GetReferencedAssemblies()
+                 .Select(Assembly.Load)
+                 .Where(a => a.GetTypes().Contains(typeof(TMediator)))
+                 .ToArray();
+
+            services.AddMediatR(mediators);
+
         }
     }
 }

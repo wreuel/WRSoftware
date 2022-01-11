@@ -11,6 +11,7 @@ namespace WRSoftware.Utils.Common.Config
     /// </summary>
     public static class ApplicationInformation
     {
+
         /// <summary>
         /// Gets the version date.
         /// </summary>

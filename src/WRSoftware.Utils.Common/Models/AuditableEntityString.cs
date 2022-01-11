@@ -10,6 +10,14 @@ namespace WRSoftware.Utils.Common.Models
     public abstract class AuditableEntityString
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="AuditableEntityString"/> class.
+        /// </summary>
+        public AuditableEntityString()
+        {
+
+        }
+
+        /// <summary>
         /// Gets or sets the created by.
         /// </summary>
         /// <value>

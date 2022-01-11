@@ -13,6 +13,7 @@ namespace WRSoftware.Utils.Common.Mapping
     /// <seealso cref="AutoMapper.Profile" />
     public class MappingProfile : Profile
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MappingProfile"/> class.
         /// </summary>
