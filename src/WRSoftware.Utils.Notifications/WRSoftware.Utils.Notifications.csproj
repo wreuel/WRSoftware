@@ -6,13 +6,12 @@
 		<RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
 		<Authors>Wesley Silva</Authors>
 		<Company>WRSoftware</Company>
-		<PackageId>WRSoftware.Utils.REST</PackageId>
-		<Product>WRSoftware.Utils.REST</Product>
+		<PackageId>WRSoftware.Utils.Notifications</PackageId>
+		<Product>WRSoftware.Utils.Notifications</Product>
 	</PropertyGroup>
 
 
 	<ItemGroup>
-		<ProjectReference Include="..\WRSoftware.Utils.Common\WRSoftware.Utils.Common.csproj" />
 		<ProjectReference Include="..\WRSoftware.Utils.WebBase\WRSoftware.Utils.WebBase.csproj" />
 	</ItemGroup>
 	<ItemGroup>
