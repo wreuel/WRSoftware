@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using WRSoftware.Utils.Common.Constants;
 
 namespace WRSoftware.Utils.Common.DTO
 {
@@ -68,7 +69,15 @@ namespace WRSoftware.Utils.Common.DTO
         /// <value>
         /// The length.
         /// </value>
-        public int Length { get; set; }
+        private int _length;
+        public int Length
+        {
+            get { return _length; }
+            set
+            {
+                _length = value == 0 ? ConfigConstants.PageSize : value;
+            }
+        }
 
         /// <summary>
         /// Gets or sets the sort.

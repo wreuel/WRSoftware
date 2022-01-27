@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace WRSoftware.Utils.Common.Models
 {
@@ -35,6 +36,23 @@ namespace WRSoftware.Utils.Common.Models
             //End = pageIndex + PageSize / 2;
             Start = 1;
             End = TotalPages;
+
+            var paginatedCount = paginatedEntities.Count();
+
+            if (IsLastPage)
+            {
+                To = totalCount;
+                From = totalCount - paginatedCount;
+            }
+            else
+            {
+                To = PageIndex * paginatedCount;
+                From = To - paginatedCount;
+            }
+            if (From == 0)
+            {
+                From = 1;
+            }
         }
 
         /// <summary>
@@ -128,6 +146,22 @@ namespace WRSoftware.Utils.Common.Models
         {
             get { return PageIndex == 0 || PageIndex == 1; }
         }
+
+        /// <summary>
+        /// Gets or sets from.
+        /// </summary>
+        /// <value>
+        /// From.
+        /// </value>
+        public int From { get; set; }
+
+        /// <summary>
+        /// Gets or sets to.
+        /// </summary>
+        /// <value>
+        /// To.
+        /// </value>
+        public int To { get; set; }
 
         /// <summary>
         /// Gets the paginated entities.
