@@ -46,19 +46,6 @@ namespace WRSoftware.Utils.EntityFrameworkCore.Interfaces.CQRS
         Task UpdateAsync(TEntity entity);
 
         /// <summary>
-        /// Softs the delete.
-        /// </summary>
-        /// <param name="filter">The filter.</param>
-        void SoftDelete(Expression<Func<TEntity, bool>> filter);
-
-        /// <summary>
-        /// Softs the delete asynchronous.
-        /// </summary>
-        /// <param name="filter">The filter.</param>
-        /// <returns></returns>
-        Task SoftDeleteAsync(Expression<Func<TEntity, bool>> filter);
-
-        /// <summary>
         /// Hards the delete.
         /// </summary>
         /// <param name="id">The identifier.</param>

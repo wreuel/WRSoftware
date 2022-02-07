@@ -169,19 +169,6 @@ namespace WRSoftware.Utils.EntityFrameworkCore.Repositories.CQRS
             return (await this._dbSet.AddAsync(entity, new CancellationToken())).Entity;
         }
 
-        /// <summary>
-        /// Softs the delete.
-        /// </summary>
-        /// <param name="filter">The filter.</param>
-        public abstract void SoftDelete(Expression<Func<TEntity, bool>> filter);
-
-        /// <summary>
-        /// Softs the delete asynchronous.
-        /// </summary>
-        /// <param name="filter">The filter.</param>
-        /// <returns></returns>
-        public abstract Task SoftDeleteAsync(Expression<Func<TEntity, bool>> filter);
-
         public virtual void Update(TEntity entity)
         {
             this._dbSet.Attach(entity);
