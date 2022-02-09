@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -28,13 +29,26 @@ namespace WRSoftware.Utils.Common.Config
         /// </summary>
         /// <param name="assemblyName">Name of the assembly.</param>
         /// <returns></returns>
-        public static string GetVersionDate(AssemblyName assemblyName)
+        public static DateTime GetVersionDate(Assembly assembly)
         {
-            var assembly = AppDomain.CurrentDomain.GetAssemblies()
-                .FirstOrDefault(x => x.GetName().Name.Equals(assemblyName.Name));
+            const string BuildVersionMetadataPrefix = "+build";
 
-            return assemblyName.Version.ToString() + " " + assembly.GetLinkerTime()
-                .ToString("yyyy-MM-dd HH:mm:ss");
+            var attribute = assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
+            if (attribute?.InformationalVersion != null)
+            {
+                var value = attribute.InformationalVersion;
+                var index = value.IndexOf(BuildVersionMetadataPrefix);
+                if (index > 0)
+                {
+                    value = value.Substring(index + BuildVersionMetadataPrefix.Length);
+                    if (DateTime.TryParseExact(value, "yyyyMMddHHmmss", CultureInfo.InvariantCulture, DateTimeStyles.None, out var result))
+                    {
+                        return result;
+                    }
+                }
+            }
+
+            return default;
         }
 
         /// <summary>
