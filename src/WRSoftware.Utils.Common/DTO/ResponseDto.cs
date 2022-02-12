@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Net;
 
 namespace WRSoftware.Utils.Common.DTO
 {
@@ -15,7 +16,17 @@ namespace WRSoftware.Utils.Common.DTO
         /// </summary>
         public ResponseDto()
         {
-            StatusCode = 200;
+            StatusCode = (int)HttpStatusCode.OK;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ResponseDto"/> class.
+        /// </summary>
+        /// <param name="success">if set to <c>true</c> [success].</param>
+        public ResponseDto(bool success)
+        {
+            Succeeded = success;
+            StatusCode = success ? (int)HttpStatusCode.OK : (int)HttpStatusCode.NotFound;
         }
 
         /// <summary>

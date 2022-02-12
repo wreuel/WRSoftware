@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Net;
 
 namespace WRSoftware.Utils.Common.DTO
 {
@@ -25,7 +26,13 @@ namespace WRSoftware.Utils.Common.DTO
         public ResponseGenericDto(T data)
         {
             Data = data;
-            StatusCode = data != null ? 200 : 404;
+            StatusCode = data != null ? (int)HttpStatusCode.OK : (int)HttpStatusCode.NotFound;
+        }
+
+        public ResponseGenericDto(bool success)
+        {
+            Succeeded = success;
+            StatusCode = success ? (int)HttpStatusCode.OK : (int)HttpStatusCode.NotFound;
         }
 
         /// <summary>
