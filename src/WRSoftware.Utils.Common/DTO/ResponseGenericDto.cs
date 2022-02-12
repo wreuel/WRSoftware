@@ -27,6 +27,7 @@ namespace WRSoftware.Utils.Common.DTO
         {
             Data = data;
             StatusCode = data != null ? (int)HttpStatusCode.OK : (int)HttpStatusCode.NotFound;
+            Succeeded = data != null;
         }
 
         public ResponseGenericDto(bool success)
