@@ -9,6 +9,7 @@
 		<Company>WRSoftware</Company>
 		<PackageId>WRSoftware.Utils.REST</PackageId>
 		<Product>WRSoftware.Utils.REST</Product>
+		<SourceRevisionId>build$([System.DateTime]::UtcNow.ToString("yyyyMMddHHmmss"))</SourceRevisionId>
 	</PropertyGroup>
 
 	<ItemGroup>

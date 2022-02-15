@@ -1,28 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-	<TargetFramework>netstandard2.1</TargetFramework>
-	<RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
-	<Copyright>Wesley Silva</Copyright>
-	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-	<Authors>Wesley Silva</Authors>
-	  <Company>WRSoftware</Company>
-	<PackageId>WRSoftware.Utils.WebBase</PackageId>
-	<Product>WRSoftware.Utils.WebBase</Product>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
+		<Copyright>Wesley Silva</Copyright>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<Authors>Wesley Silva</Authors>
+		<Company>WRSoftware</Company>
+		<PackageId>WRSoftware.Utils.WebBase</PackageId>
+		<Product>WRSoftware.Utils.WebBase</Product>
+		<SourceRevisionId>build$([System.DateTime]::UtcNow.ToString("yyyyMMddHHmmss"))</SourceRevisionId>
+	</PropertyGroup>
 
-  <ItemGroup>
-	<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
-  </ItemGroup>
-  <ItemGroup>
-	<ProjectReference Include="..\WRSoftware.Utils.Helper\WRSoftware.Utils.Helper.csproj" />
-	<ProjectReference Include="..\WRSoftware.Utils.Logging\WRSoftware.Utils.Logging.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-	<None Include="..\..\LICENSE.txt">
-	  <Pack>True</Pack>
-	  <PackagePath></PackagePath>
-	</None>
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\WRSoftware.Utils.Helper\WRSoftware.Utils.Helper.csproj" />
+		<ProjectReference Include="..\WRSoftware.Utils.Logging\WRSoftware.Utils.Logging.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\LICENSE.txt">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>

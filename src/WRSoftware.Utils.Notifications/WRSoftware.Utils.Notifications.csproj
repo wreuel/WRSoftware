@@ -8,6 +8,7 @@
 		<Company>WRSoftware</Company>
 		<PackageId>WRSoftware.Utils.Notifications</PackageId>
 		<Product>WRSoftware.Utils.Notifications</Product>
+		<SourceRevisionId>build$([System.DateTime]::UtcNow.ToString("yyyyMMddHHmmss"))</SourceRevisionId>
 	</PropertyGroup>
 
 

@@ -9,6 +9,7 @@
 		<Company>WRSoftware</Company>
 		<PackageId>WRSoftware.Utils.IoC.Framework</PackageId>
 		<Product>WRSoftware.Utils.IoC.Framework</Product>
+		<SourceRevisionId>build$([System.DateTime]::UtcNow.ToString("yyyyMMddHHmmss"))</SourceRevisionId>
 	</PropertyGroup>
 
 	<ItemGroup>

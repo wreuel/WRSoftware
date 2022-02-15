@@ -1,25 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-	<TargetFramework>netstandard2.1</TargetFramework>
-	<LangVersion>latest</LangVersion>
-	<RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
-	<Copyright>Wesley Silva</Copyright>
-	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-	<PackageId>WRSoftware.Utils.MediatRHangfire</PackageId>
-	<Authors>Wesley Silva</Authors>
-	<Company>WRSoftware</Company>
-	<Product>WRSoftware.Utils.MediatRHangfire</Product>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<RepositoryUrl>https://github.com/wreuel/WRSoftware</RepositoryUrl>
+		<Copyright>Wesley Silva</Copyright>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageId>WRSoftware.Utils.MediatRHangfire</PackageId>
+		<Authors>Wesley Silva</Authors>
+		<Company>WRSoftware</Company>
+		<Product>WRSoftware.Utils.MediatRHangfire</Product>
+		<SourceRevisionId>build$([System.DateTime]::UtcNow.ToString("yyyyMMddHHmmss"))</SourceRevisionId>
+	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Hangfire.Core" Version="1.7.24" />
 		<PackageReference Include="MediatR" Version="9.0.0" />
 	</ItemGroup>
 	<ItemGroup>
-	  <None Include="..\..\LICENSE.txt">
-	    <Pack>True</Pack>
-	    <PackagePath></PackagePath>
-	  </None>
+		<None Include="..\..\LICENSE.txt">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
 	</ItemGroup>
 
 </Project>

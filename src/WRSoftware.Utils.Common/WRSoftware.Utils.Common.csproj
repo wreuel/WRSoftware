@@ -11,6 +11,7 @@
 		<Company>WRSoftware</Company>
 		<PackageId>WRSoftware.Utils.Common</PackageId>
 		<Product>WRSoftware.Utils.Common</Product>
+		<SourceRevisionId>build$([System.DateTime]::UtcNow.ToString("yyyyMMddHHmmss"))</SourceRevisionId>
 	</PropertyGroup>
 
 	<ItemGroup>
