@@ -30,5 +30,24 @@ namespace WRSoftware.Utils.Helper
                 return DateTime.Now;
             }
         }
+
+        public class DateTimeOffsetResolver : IValueResolver<object, object, DateTimeOffset>
+        {
+
+            /// <summary>
+            /// Implementors use source object to provide a destination object.
+            /// </summary>
+            /// <param name="source">Source object</param>
+            /// <param name="destination">Destination object, if exists</param>
+            /// <param name="destMember">Destination member</param>
+            /// <param name="context">The context of the mapping</param>
+            /// <returns>
+            /// Result, typically build from the source resolution result
+            /// </returns>
+            public DateTimeOffset Resolve(object source, object destination, DateTimeOffset destMember, ResolutionContext context)
+            {
+                return DateTimeOffset.Now;
+            }
+        }
     }
 }

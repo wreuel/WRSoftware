@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WRSoftware.Utils.Common.Models
 {
-    public class AuditableEntityStringOffset
+    public abstract class AuditableEntityStringOffset
     {
         public AuditableEntityStringOffset()
         {

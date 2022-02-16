@@ -2,7 +2,7 @@
 
 namespace WRSoftware.Utils.Common.Models
 {
-    public class AuditableEntityGuidOffset
+    public abstract class AuditableEntityGuidOffset
     {
         public AuditableEntityGuidOffset()
         {
