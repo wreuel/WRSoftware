@@ -21,13 +21,13 @@ namespace WRSoftware.Utils.Common.Models
         /// <summary>
         /// Initializes a new instance of the <see cref="Paginated{TEntity}" /> class.
         /// </summary>
-        /// <param name="totalCount">The total count.</param>
+        /// <param name="totalItemsCount">The total count.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="pageIndex">Index of the page.</param>
         /// <param name="paginatedEntities">The paginated entities.</param>
-        public Paginated(int totalCount, int pageSize, int pageIndex, IEnumerable<TEntity> paginatedEntities)
+        public Paginated(int totalItemsCount, int pageSize, int pageIndex, IEnumerable<TEntity> paginatedEntities)
         {
-            TotalItemsCount = totalCount; //total
+            TotalItemsCount = totalItemsCount; //total
             PageSize = pageSize; //pageLength
             TotalPages = (int)Math.Ceiling((double)TotalItemsCount / (double)pageSize); //TotalPages
             PageIndex = pageIndex == 0 ? 1 : pageIndex;
@@ -41,8 +41,8 @@ namespace WRSoftware.Utils.Common.Models
 
             if (IsLastPage)
             {
-                To = totalCount;
-                From = totalCount - paginatedCount;
+                To = totalItemsCount;
+                From = totalItemsCount - paginatedCount;
             }
             else
             {
@@ -53,6 +53,11 @@ namespace WRSoftware.Utils.Common.Models
             {
                 From = 1;
             }
+
+            HasPreviousPage = PageIndex > 1;
+            HasNextPage = PageIndex == 0 ? PageIndex + 1 < TotalPages : PageIndex < TotalPages;
+            IsLastPage = PageIndex == 0 ? PageIndex + 1 == TotalPages : PageIndex == TotalPages;
+            IsFirstPage = PageIndex == 0 || PageIndex == 1;
         }
 
         /// <summary>
@@ -61,7 +66,7 @@ namespace WRSoftware.Utils.Common.Models
         /// <value>
         /// The size of the page.
         /// </value>
-        public int PageSize { get; }
+        public int PageSize { get; private set; }
 
         /// <summary>
         /// Gets the start.
@@ -69,7 +74,7 @@ namespace WRSoftware.Utils.Common.Models
         /// <value>
         /// The start.
         /// </value>
-        public int Start { get; }
+        public int Start { get; private set; }
 
         /// <summary>
         /// Gets the end.
@@ -77,7 +82,7 @@ namespace WRSoftware.Utils.Common.Models
         /// <value>
         /// The end.
         /// </value>
-        public int End { get; }
+        public int End { get; private set; }
 
         /// <summary>
         /// Gets or sets the index of the page.
@@ -85,7 +90,7 @@ namespace WRSoftware.Utils.Common.Models
         /// <value>
         /// The index of the page.
         /// </value>
-        public int PageIndex { get; }
+        public int PageIndex { get; private set; }
 
         /// <summary>
         /// Gets or sets the total pages.
@@ -93,7 +98,7 @@ namespace WRSoftware.Utils.Common.Models
         /// <value>
         /// The total pages.
         /// </value>
-        public int TotalPages { get; }
+        public int TotalPages { get; private set; }
 
         /// <summary>
         /// Gets the total count.
@@ -101,7 +106,7 @@ namespace WRSoftware.Utils.Common.Models
         /// <value>
         /// The total count.
         /// </value>
-        public int TotalItemsCount { get; }
+        public int TotalItemsCount { get; private set; }
 
         /// <summary>
         /// Gets a value indicating whether this instance has previous page.
@@ -111,7 +116,9 @@ namespace WRSoftware.Utils.Common.Models
         /// </value>
         public bool HasPreviousPage
         {
-            get { return PageIndex > 1; }
+            //get { return PageIndex > 1; }
+            get; private set;
+
         }
 
         /// <summary>
@@ -122,7 +129,8 @@ namespace WRSoftware.Utils.Common.Models
         /// </value>
         public bool HasNextPage
         {
-            get { return PageIndex == 0 ? PageIndex + 1 < TotalPages : PageIndex < TotalPages; }
+            //get { return PageIndex == 0 ? PageIndex + 1 < TotalPages : PageIndex < TotalPages; }
+            get; private set;
         }
 
         /// <summary>
@@ -133,7 +141,8 @@ namespace WRSoftware.Utils.Common.Models
         /// </value>
         public bool IsLastPage
         {
-            get { return PageIndex == 0 ? PageIndex + 1 == TotalPages : PageIndex == TotalPages; }
+            //get { return PageIndex == 0 ? PageIndex + 1 == TotalPages : PageIndex == TotalPages; }
+            get; private set;
         }
 
         /// <summary>
@@ -144,7 +153,8 @@ namespace WRSoftware.Utils.Common.Models
         /// </value>
         public bool IsFirstPage
         {
-            get { return PageIndex == 0 || PageIndex == 1; }
+            //get { return PageIndex == 0 || PageIndex == 1; }
+            get; private set;
         }
 
         /// <summary>
@@ -169,6 +179,6 @@ namespace WRSoftware.Utils.Common.Models
         /// <value>
         /// The paginated entities.
         /// </value>
-        public IEnumerable<TEntity> PaginatedEntities { get; }
+        public IEnumerable<TEntity> PaginatedEntities { get; private set; }
     }
 }
