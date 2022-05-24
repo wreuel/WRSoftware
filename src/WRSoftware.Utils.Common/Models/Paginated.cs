@@ -39,6 +39,11 @@ namespace WRSoftware.Utils.Common.Models
 
             var paginatedCount = paginatedEntities.Count();
 
+            HasPreviousPage = PageIndex > 1;
+            HasNextPage = PageIndex == 0 ? PageIndex + 1 < TotalPages : PageIndex < TotalPages;
+            IsLastPage = PageIndex == 0 ? PageIndex + 1 == TotalPages : PageIndex == TotalPages;
+            IsFirstPage = PageIndex == 0 || PageIndex == 1;
+
             if (IsLastPage)
             {
                 To = totalItemsCount;
@@ -53,11 +58,6 @@ namespace WRSoftware.Utils.Common.Models
             {
                 From = 1;
             }
-
-            HasPreviousPage = PageIndex > 1;
-            HasNextPage = PageIndex == 0 ? PageIndex + 1 < TotalPages : PageIndex < TotalPages;
-            IsLastPage = PageIndex == 0 ? PageIndex + 1 == TotalPages : PageIndex == TotalPages;
-            IsFirstPage = PageIndex == 0 || PageIndex == 1;
         }
 
         /// <summary>
